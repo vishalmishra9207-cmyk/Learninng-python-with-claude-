@@ -1,1 +1,25 @@
 
+try :
+    with open ("sample.txt", "w") as f:
+        data = f.write("This is a sample file.\n")
+        data = f.write("It contains multiple lines.")
+    
+
+    with open("sample.txt" , 'r') as f:
+        print(f.read())
+
+except FileNotFoundError :
+    print("The file {samaple.txt} was not found ")
+
+with open ("output.txt" , "w") as f:
+    text1 = input("Enter text to write to file : ")
+    f.write(text1 + "\n")
+    print("Data successfully written and appended.")
+    text2 = input("Enter additional text to append : ")
+    f.write(text2 + "\n")
+    print("Data successfully written and appended.\n")
+    
+
+with open("output.txt", "r") as f:
+    print("Final content  of {output.txt}: \n")
+    print(f.read())
